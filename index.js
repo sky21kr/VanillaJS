@@ -1,8 +1,13 @@
-const nicoInfo = {
-    name:"Nico",
-    age:33,
-    gender:"Male",
-    isHandsome:true
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    title.classList.toggle(CLICKED_CLASS);
 }
 
-console.log(nicoInfo.age);
+function init(){
+    title.addEventListener("click", handleClick);
+}
+
+init();
