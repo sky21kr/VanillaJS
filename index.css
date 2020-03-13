@@ -1,13 +1,48 @@
 body{
     background-color:#34495e;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+
+}
+
+.js-clock{
+    font-size: 60px;
+}
+
+.js-form{
+    font-size: 30px;
 }
 
 .btn{
     cursor: pointer;
 }
 
+.js-toDoList{
+    font-size: 20px;
+}
+
+input{
+    color: white;
+    border:none;
+    background: transparent;
+    width:500px;
+    height:60px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 굴림;
+    font-weight: 900;
+}
+
+input::placeholder{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-style:italic;
+    text-decoration: underline;
+}
+
 h1{
-    color:#34495e;
     transition: color .5s ease-in-out;
 }
 
@@ -17,6 +52,7 @@ h1{
 
 .form,
 .greetings {
+    font-size: 30px;
     display: none;
 }
 
