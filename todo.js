@@ -10,8 +10,9 @@ function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
+    
     const cleanToDos = toDos.filter(function(toDo) {
-        return toDo.id !== parseInt(li.id); 
+        return toDo.text !== $(li).children("span")[0].innerHTML; // id 없애고 값만 비교해서 삭제 
     });
 
     toDos = cleanToDos;
@@ -26,18 +27,15 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
-    const newId = toDos.length + 1;
     delBtn.innerHTML = "X";
     delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(span);
-    li.id = newId;
     toDoList.appendChild(li);
 
     const toDoObj = {
-        text: text,
-        id: newId // Id 중복되는 경우 수정해보기
+        text: text
     };
     toDos.push(toDoObj);
     saveToDos();
