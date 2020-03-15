@@ -10,7 +10,9 @@ function getWeather(lat, lng) {
     }).then(function(json){
         const temperature = json.main.temp;
         const place = json.name;
+        $(weather).attr("text-align","right");
         weather.innerText = `${temperature} @ ${place}`;
+        
     }
     )
 }

@@ -10,7 +10,6 @@ function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
-    
     const cleanToDos = toDos.filter(function(toDo) {
         return toDo.text !== $(li).children("span")[0].innerHTML; // id 없애고 값만 비교해서 삭제 
     });
@@ -30,8 +29,8 @@ function paintToDo(text) {
     delBtn.innerHTML = "X";
     delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
-    li.appendChild(delBtn);
     li.appendChild(span);
+    li.appendChild(delBtn);
     toDoList.appendChild(li);
 
     const toDoObj = {

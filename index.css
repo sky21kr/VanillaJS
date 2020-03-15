@@ -20,6 +20,10 @@ body{
 
 .js-toDoList{
     font-size: 20px;
+    text-align: left;
+    z-index: 4;
+    list-style-image: url('images/check.png');
+    padding-left: 300px;
 }
 
 input{
@@ -77,4 +81,8 @@ h1{
     height: 100%;
     z-index: -1;
     animation: fadeIn .5s linear;
+}
+
+.js-weather{
+    text-align: right;
 }
