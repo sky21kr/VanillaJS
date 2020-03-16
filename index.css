@@ -15,14 +15,18 @@ body{
 }
 
 .btn{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url(images/check.png) no-repeat;
+    background: "";
     cursor: pointer;
 }
 
 .js-toDoList{
     font-size: 20px;
     text-align: left;
-    z-index: 4;
-    list-style-image: url('images/check.png');
+    list-style: none;
     padding-left: 300px;
 }
 
@@ -48,6 +52,7 @@ input::placeholder{
 
 h1{
     transition: color .5s ease-in-out;
+    margin-top: 40px;
 }
 
 .clicked {
