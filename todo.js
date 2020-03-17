@@ -11,7 +11,7 @@ function deleteToDo(event) {
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo) {
-        return toDo.text !== $(li).children("span")[0].innerHTML; // id 없애고 값만 비교해서 삭제 
+        return toDo.text !== $(li).children("span")[0].innerHTML; // id 없애고 값만 비교해서 삭제
     });
 
     toDos = cleanToDos;
@@ -22,6 +22,14 @@ function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+function askForDel(btn) {
+    const result = confirm("삭제하시겠습니까 ?")
+
+    if(result) {
+        deleteToDo(btn);
+    }
+}
+
 function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
@@ -29,7 +37,7 @@ function paintToDo(text) {
     const img = document.createElement("img");
 
     delBtn.classList.add('btn')
-    delBtn.addEventListener("click", deleteToDo);
+    delBtn.addEventListener("click", askForDel);
 
     span.innerText = text;
     span.style.paddingLeft = "10px";

@@ -3,7 +3,6 @@ body{
     text-align: center;
     vertical-align: middle;
     color: white;
-
 }
 
 .js-clock{
@@ -27,7 +26,6 @@ body{
     font-size: 20px;
     text-align: left;
     list-style: none;
-    padding-left: 300px;
 }
 
 input{
