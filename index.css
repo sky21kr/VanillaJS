@@ -28,7 +28,7 @@ body{
     list-style: none;
 }
 
-input{
+.js-inputList, .js-inputName{
     color: white;
     border:none;
     background: transparent;
@@ -40,12 +40,23 @@ input{
     font-weight: 900;
 }
 
-input::placeholder{
+.js-inputList::placeholder,.js-inputName::placeholder{
     color: white;
     font-size: 30px;
     text-align: center;
     font-style:italic;
     text-decoration: underline;
+}
+
+input{
+    color: white;
+    border:none;
+    background: transparent;
+    font-size: 20px;
+    text-align: center;
+    font-family: 굴림;
+    font-weight: 900;
+    
 }
 
 h1{
