@@ -40,7 +40,7 @@ function paintToDo(text) {
 
     span.innerText = text;
     span.style.paddingLeft = "10px";
-    span.addEventListener("dblclick", changeList);
+    span.addEventListener("dblclick", handleChangeList);
 
     li.appendChild(delBtn);
     li.appendChild(span);
@@ -53,10 +53,23 @@ function paintToDo(text) {
     saveToDos();
 }
 
+function checkListOverlap(list) {
+    if( toDos.indexOf(list) === -1 ) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue);
+    if(!checkListOverlap(currentValue)) {
+        paintToDo(currentValue);
+    } else {
+        alert('이미 존재하는 리스트입니다.');
+    }
+
     toDoInput.value = "";
 }
 
@@ -70,13 +83,23 @@ function loadToDos() {
     }
 }
 
-function changeList(){
-    const beforeContent = event.target.innerHTML;
-    const afterContent = prompt("바꿀 내용을 입력하세요",event.target.innerHTML);
+function changeList(beforeContent, afterContent) {
     event.target.innerHTML = afterContent;
     toDos.splice(toDos.indexOf(beforeContent),1,afterContent);
 
     saveToDos();
+}
+
+function handleChangeList(){
+    const beforeContent = event.target.innerHTML;
+    const afterContent = prompt("바꿀 내용을 입력하세요",event.target.innerHTML);
+
+    if(!checkListOverlap(afterContent)) {
+        changeList(beforeContent, afterContent);
+    } else {
+        alert('이미 존재하는 리스트입니다.')
+    }
+    
 }
 
 

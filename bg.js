@@ -3,10 +3,9 @@ const body = document.querySelector("body");
 const IMG_NUMBER = 3;
 
 function paintImage(imgNumber) {
-    const image = new Image();
-    image.src = `images/${imgNumber + 1}.jpg`;
-    image.classList.add("bgImage");
-    body.prepend(image);
+    body.style.backgroundImage = `url("images/${imgNumber + 1}.jpg")`;
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "100% 100%";
 }
 
 function genRandom() {

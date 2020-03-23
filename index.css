@@ -1,5 +1,6 @@
 body{
     background-color:#34495e;
+    background-attachment: fixed;
     text-align: center;
     vertical-align: middle;
     color: white;
@@ -56,7 +57,7 @@ input{
     text-align: center;
     font-family: 굴림;
     font-weight: 900;
-    
+
 }
 
 h1{
