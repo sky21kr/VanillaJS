@@ -93,8 +93,9 @@ function changeList(beforeContent, afterContent) {
 function handleChangeList(){
     const beforeContent = event.target.innerHTML;
     const afterContent = prompt("바꿀 내용을 입력하세요",event.target.innerHTML);
-
-    if(!checkListOverlap(afterContent)) {
+    
+    if( afterContent === null ) {
+    } else if (!checkListOverlap(afterContent)) {
         changeList(beforeContent, afterContent);
     } else {
         alert('이미 존재하는 리스트입니다.')
