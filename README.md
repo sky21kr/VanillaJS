@@ -1,4 +1,4 @@
-# JAVASCRIPT PRACTICE
+# Javascript Practice
 ToDoList
 
 # 개발 환경
