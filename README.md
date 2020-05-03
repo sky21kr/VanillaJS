@@ -1,2 +1,3 @@
 # VanillaJS
+
 VanillaJS Project

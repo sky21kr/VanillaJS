@@ -1,103 +1,104 @@
-body{
-    background-color:#34495e;
-    background-attachment: fixed;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
+body {
+  background-color: #34495e;
+  background-attachment: fixed;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
 }
 
-.js-clock{
-    font-size: 60px;
+.js-clock {
+  font-size: 60px;
 }
 
-.js-form{
-    font-size: 30px;
+.js-form {
+  font-size: 30px;
 }
 
-.btn{
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: url(images/check.png) no-repeat;
-    background: "";
-    cursor: pointer;
+.btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url(images/check.png) no-repeat;
+  background: "";
+  cursor: pointer;
 }
 
-.js-toDoList{
-    font-size: 20px;
-    text-align: left;
-    list-style: none;
+.js-toDoList {
+  font-size: 20px;
+  text-align: left;
+  list-style: none;
 }
 
-.js-inputList, .js-inputName{
-    color: white;
-    border:none;
-    background: transparent;
-    width:500px;
-    height:60px;
-    font-size: 30px;
-    text-align: center;
-    font-family: 굴림;
-    font-weight: 900;
+.js-inputList,
+.js-inputName {
+  color: white;
+  border: none;
+  background: transparent;
+  width: 500px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  font-family: 굴림;
+  font-weight: 900;
 }
 
-.js-inputList::placeholder,.js-inputName::placeholder{
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    font-style:italic;
-    text-decoration: underline;
+.js-inputList::placeholder,
+.js-inputName::placeholder {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
 }
 
-input{
-    color: white;
-    border:none;
-    background: transparent;
-    font-size: 20px;
-    text-align: center;
-    font-family: 굴림;
-    font-weight: 900;
-
+input {
+  color: white;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  text-align: center;
+  font-family: 굴림;
+  font-weight: 900;
 }
 
-h1{
-    transition: color .5s ease-in-out;
-    margin-top: 40px;
+h1 {
+  transition: color 0.5s ease-in-out;
+  margin-top: 40px;
 }
 
 .clicked {
-    color: #7f8c8d;
+  color: #7f8c8d;
 }
 
 .form,
 .greetings {
-    font-size: 30px;
-    display: none;
+  font-size: 30px;
+  display: none;
 }
 
 .showing {
-    display: block;
+  display: block;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .bgImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: fadeIn .5s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
 }
 
-.js-weather{
-    text-align: right;
+.js-weather {
+  text-align: right;
 }
