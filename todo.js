@@ -11,7 +11,7 @@ function deleteToDo(event) {
   const li = btn.parentNode;
   toDoList.removeChild(li);
   const cleanToDos = toDos.filter(function (toDo) {
-    return toDo !== $(li).children("span")[0].innerHTML; // id 없애고 값만 비교해서 삭제
+    return toDo !== li.lastChild.innerHTML; // id 없애고 값만 비교해서 삭제
   });
 
   toDos = cleanToDos;
@@ -86,7 +86,7 @@ function loadToDos() {
 function changeList(beforeContent, afterContent) {
   event.target.innerHTML = afterContent;
   toDos.splice(toDos.indexOf(beforeContent), 1, afterContent);
-  
+
   saveToDos();
 }
 
